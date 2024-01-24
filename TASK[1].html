@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h3>A few facts about the world we live in</h3>
+    <img src="https://images.pexels.com/photos/41953/earth-blue-planet-globe-planet-41953.jpeg?auto=compress&cs=tinysrgb&w=600"height="300" width="300">
+    <p>Earth is the third planet from the sun ans is the largest of the terrestrial planets.The Earth is the only planet in our solar system not to be named after a greek or roman deity.
+        The Earth was formed approximately 4.54 billion years ago and is the only known planet to support life.
+    </p>
+    <hr>
+    <h3>About the earth</h3>
+    <ul>
+        <li>Polar Diameter:12.714 km</li>
+        <li>Mass:5.97 x 10^24 kg</li>
+        <li>Moon:1 (The Moon)</li>
+    </ul>
+        <hr>
+        <ol>
+            <li>The Earth's rotation is gradually slowing.</li>
+            <li>The Earth was once believed to be the center of the universe.</li>
+            <li>Earth has a powerful magnetic field.</li>
+        </ol>
+        <hr>
+        <table>
+            <tr>
+
+                    <th><b>Name</th>
+                    <th><b>Radius</th>
+                    <th><b>Average<br>Temperature</b></th>
+                </tr>
+                <tr>
+                    <td>Mars</td>
+                    <td>3.396km</td>
+                    <td>-46<sup>o</sup>c</td>
+                </tr>
+                <tr>
+                    <td>Venus</td>
+                    <td>6.052km</td>
+                    <td>462<sup>o</sup>c</td>
+                </tr>
+        </table>
+    <hr>
+    <p>want to know more?</p>
+    <a href="https://en.wikipedia.org/wiki/Earth"><button>Click Here</button></a>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ps3kWOQRQnY?si=D6FJN9mUyFCjHMFp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
