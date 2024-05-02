@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+        <title>
+            How to change the background color
+            after clicking the button ?
+        </title>
+    </head>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        </style>
+    
+    <body style="text-align:center;">
+        <h1 style="color:green;">
+        Sakshi Gajare
+        </h1>
+    
+        <h3>
+            Click on button to change the 
+            background color
+        </h3>
+    
+        <button onclick="myFunc()">
+            Click here
+        </button>
+    
+        <h2 id="GFG" style="color:green;"></h2>
+    
+        <script>
+            let result = document.getElementById("GFG");
+    
+            function changeColor(color) {
+                document.body.style.background = color;
+            }
+    
+            function myFunc() {
+                changeColor('yellow');
+                result.innerHTML = "Background Color changed";
+            }	 
+             function getRandomColor() { 
+return (Math.floor(Math.random() * (255 - 10)) + 10);
+}
+//a moment when we refresh our page the colorchange....
+(function changeColor(){
+    let color = `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+    console.log(color);
+    setTimeout(document.body.style.background = color, 
+        1000);
+} )() 
+    </script>  
+    </body>
+    
+    </html>
+    
